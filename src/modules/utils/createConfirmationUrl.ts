@@ -7,5 +7,5 @@ export const createConfirmationUrl = async (userId: string) => {
     const token = v4();
     await redis.set(confirmUserPrefix + token, userId, "ex", 60 * 60 * 24); //1 day expiration
 
-    return `https://rcvr.io/auth/confirm/${token}`
+    return `https://` + process.env.WEBSITE_DOMAIN + `/auth/confirm/${token}`
 }
