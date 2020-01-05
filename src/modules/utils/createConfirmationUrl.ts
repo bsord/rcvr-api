@@ -4,6 +4,7 @@ import { confirmUserPrefix } from '../constants/redisPrefixes';
 
 
 export const createConfirmationUrl = async (userId: string) => {
+    console.log('creating confirmation token and email')
     const token = v4();
     await redis.set(confirmUserPrefix + token, userId, "ex", 60 * 60 * 24); //1 day expiration
 
