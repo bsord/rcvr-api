@@ -1,3 +1,13 @@
+## [0.1.3](https://github.com/bsord/rcvr-api/compare/0.1.2...0.1.3) (2020-10-20)
+
+
+### Bug Fixes
+
+* **helm:** update secret chart format ([caf95fd](https://github.com/bsord/rcvr-api/commit/caf95fda005222b5422638cefd2830f7e8347c02))
+* **helm:** update secret chart format ([c10c5e4](https://github.com/bsord/rcvr-api/commit/c10c5e4ecc9fd936d16931a91603b73d9aefebbb))
+
+
+
 ## [0.1.2](https://github.com/bsord/rcvr-api/compare/0.1.1...0.1.2) (2020-10-20)
 
 
