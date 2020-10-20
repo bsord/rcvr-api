@@ -1,3 +1,12 @@
+## [0.1.9](https://github.com/bsord/rcvr-api/compare/0.1.8...0.1.9) (2020-10-20)
+
+
+### Bug Fixes
+
+* **monitoring:** change healthz response ([9a3a49b](https://github.com/bsord/rcvr-api/commit/9a3a49be065d566bebd22f4d778a47195a9ce589))
+
+
+
 ## [0.1.8](https://github.com/bsord/rcvr-api/compare/0.1.7...0.1.8) (2020-10-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **helm:** fix configmap ports ([78c86dd](https://github.com/bsord/rcvr-api/commit/78c86dd56a4e8631c9653cbbacd5cf982201db4b))
-
-
-
-## [0.1.4](https://github.com/bsord/rcvr-api/compare/0.1.3...0.1.4) (2020-10-20)
-
-
-### Bug Fixes
-
-* **helm:** what are you doing stepbro ([58de29c](https://github.com/bsord/rcvr-api/commit/58de29c3e687bd5c987faf624944ed675aa14904))
 
 
 
