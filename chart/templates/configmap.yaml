@@ -4,15 +4,15 @@ metadata:
   name: rcvr-api-config
   namespace: rcvr
 data:
-  dbhost: {{ .Values.dbHost }} rcvr-db-mariadb
-  dbport: {{ .Values.dbPort }} "3306"
-  dbname: {{ .Values.dbName }} rcvr-db
-  dbuser: {{ .Values.dbUser}} RcvrDBUser
+  dbhost: {{ .Values.dbHost }}
+  dbport: {{ .Values.dbPort }}
+  dbname: {{ .Values.dbName }}
+  dbuser: {{ .Values.dbUser}}
 
-  redishost: {{ .Values.redisHost }} rcvr-session-cache-redis-master
-  redisport: {{ .Values.redisPort }} "6379"
+  redishost: {{ .Values.redisHost }}
+  redisport: {{ .Values.redisPort }}
 
-  relayhost: {{ .Values.relayHost }} rcvr-relay
-  relayport: {{ .Values.relayPort }} "587"
-  sender_domain: {{ .Values.senderDomain }} bsord.dev
-  website_domain: {{ .Values.websiteDomain }} rcvr.bsord.dev
+  relayhost: {{ .Values.relayHost }}
+  relayport: {{ .Values.relayPort }}
+  sender_domain: {{ .Values.senderDomain }}
+  website_domain: {{ .Values.websiteDomain }}
