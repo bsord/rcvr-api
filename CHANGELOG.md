@@ -1,3 +1,12 @@
+## [0.1.7](https://github.com/bsord/rcvr-api/compare/0.1.6...0.1.7) (2020-10-20)
+
+
+### Bug Fixes
+
+* **monitoring:** add healthz endpoint ([7669234](https://github.com/bsord/rcvr-api/commit/7669234707e9075f9f883f5f56dd8b87a413a006))
+
+
+
 ## [0.1.6](https://github.com/bsord/rcvr-api/compare/0.1.5...0.1.6) (2020-10-20)
 
 
@@ -32,15 +41,6 @@
 
 * **helm:** update secret chart format ([caf95fd](https://github.com/bsord/rcvr-api/commit/caf95fda005222b5422638cefd2830f7e8347c02))
 * **helm:** update secret chart format ([c10c5e4](https://github.com/bsord/rcvr-api/commit/c10c5e4ecc9fd936d16931a91603b73d9aefebbb))
-
-
-
-## [0.1.2](https://github.com/bsord/rcvr-api/compare/0.1.1...0.1.2) (2020-10-20)
-
-
-### Bug Fixes
-
-* **redis:** add password support ([18711dd](https://github.com/bsord/rcvr-api/commit/18711dd41f7546402319c075690e954a343db6a0))
 
 
 
