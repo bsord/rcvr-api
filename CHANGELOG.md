@@ -1,3 +1,12 @@
+## [0.1.4](https://github.com/bsord/rcvr-api/compare/0.1.3...0.1.4) (2020-10-20)
+
+
+### Bug Fixes
+
+* **helm:** what are you doing stepbro ([58de29c](https://github.com/bsord/rcvr-api/commit/58de29c3e687bd5c987faf624944ed675aa14904))
+
+
+
 ## [0.1.3](https://github.com/bsord/rcvr-api/compare/0.1.2...0.1.3) (2020-10-20)
 
 
