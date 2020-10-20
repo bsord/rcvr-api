@@ -20,6 +20,7 @@ dbPassword: S3ssionStore
 
 redisHost: rcvr-session-cache-redis-master
 redisPort: "6379"
+redisPassword: S3ssionStore!
 
 relayHost: rcvr-relay
 relayPort: "587"

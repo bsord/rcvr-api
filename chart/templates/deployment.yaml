@@ -62,6 +62,11 @@ spec:
                 configMapKeyRef:
                   name: rcvr-api-config
                   key: redishost
+            - name: REDISPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: rcvr-db-user-pass
+                  key: redis-password
             - name: DBUSER
               value: "root"
             - name: DBPASS
