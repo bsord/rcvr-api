@@ -68,7 +68,10 @@ spec:
                   name: rcvr-db-user-pass
                   key: redis-password
             - name: DBUSER
-              value: "root"
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: dbuser
             - name: DBPASS
               valueFrom:
                 secretKeyRef:
