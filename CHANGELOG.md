@@ -1,3 +1,12 @@
+## [0.1.6](https://github.com/bsord/rcvr-api/compare/0.1.5...0.1.6) (2020-10-20)
+
+
+### Bug Fixes
+
+* **helm:** fix db username env var ([f736f09](https://github.com/bsord/rcvr-api/commit/f736f09be218d57f5340796c91628628cc95bc48))
+
+
+
 ## [0.1.5](https://github.com/bsord/rcvr-api/compare/0.1.4...0.1.5) (2020-10-20)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * **redis:** add password support ([18711dd](https://github.com/bsord/rcvr-api/commit/18711dd41f7546402319c075690e954a343db6a0))
-
-
-
-## [0.1.1](https://github.com/bsord/rcvr-api/compare/0.1.0...0.1.1) (2020-10-20)
-
-
-### Bug Fixes
-
-* **todos:** add things to do ([677ef2c](https://github.com/bsord/rcvr-api/commit/677ef2c2b545b570c6b7e08c76c43cb2ccacdf23))
 
 
 
