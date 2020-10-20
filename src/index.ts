@@ -47,7 +47,7 @@ const main = async () => {
     apolloServer.applyMiddleware({app, cors: false, path: '/api'})
 
     // Handle livenessProbe
-    app.get('/healthz', (res) => {
+    app.get('/healthz', (req, res) => {
         res.send('im alive');
     });
 
