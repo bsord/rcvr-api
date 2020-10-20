@@ -48,7 +48,7 @@ const main = async () => {
 
     // Handle livenessProbe
     app.get('/healthz', (res) => {
-        res.send('ok');
+        res.send('im alive');
     });
 
     app.listen(4000, () => {
