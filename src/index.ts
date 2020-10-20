@@ -48,9 +48,9 @@ const main = async () => {
 
     // Handle livenessProbe
     app.get('/healthz', (res) => {
-        res.sendStatus(200);
+        res.status(200).send('ok');
     });
-    
+
     app.listen(4000, () => {
         console.log("Server started")
     });
