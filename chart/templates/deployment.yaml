@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "rcvr-api.fullname" . }}
+  labels:
+    {{- include "rcvr-api.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "rcvr-api.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "rcvr-api.selectorLabels" . | nindent 8 }}
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      serviceAccountName: {{ include "rcvr-api.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 4000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: DBHOST
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: dbhost
+            - name: DBPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: dbport
+            - name: DBNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: dbname
+            - name: REDISHOST
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: redishost
+            - name: DBUSER
+              value: "root"
+            - name: DBPASS
+              valueFrom:
+                secretKeyRef:
+                  name: rcvr-db-user-pass
+                  key: mariadb-root-password
+            - name: RELAYHOST
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: relayhost
+            - name: RELAYPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: relayport
+            - name: SENDER_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: sender_domain
+            - name: WEBSITE_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: website_domain
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
