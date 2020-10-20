@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/bsord/rcvr-api/compare/0.1.1...0.1.2) (2020-10-20)
+
+
+### Bug Fixes
+
+* **redis:** add password support ([18711dd](https://github.com/bsord/rcvr-api/commit/18711dd41f7546402319c075690e954a343db6a0))
+
+
+
 ## [0.1.1](https://github.com/bsord/rcvr-api/compare/0.1.0...0.1.1) (2020-10-20)
 
 
