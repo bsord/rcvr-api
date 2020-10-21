@@ -97,6 +97,11 @@ spec:
                 configMapKeyRef:
                   name: rcvr-api-config
                   key: website_domain
+            - name: CORS_ORIGIN
+              valueFrom:
+                configMapKeyRef:
+                  name: rcvr-api-config
+                  key: website_domain
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
