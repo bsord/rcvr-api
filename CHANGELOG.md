@@ -1,3 +1,12 @@
+## [0.1.12](https://github.com/bsord/rcvr-api/compare/0.1.11...0.1.12) (2020-10-21)
+
+
+### Bug Fixes
+
+* **helm:** change relay service ref ([3dce5e7](https://github.com/bsord/rcvr-api/commit/3dce5e74e3ed0d65878b739b7e4673a2e910bc2c))
+
+
+
 ## [0.1.11](https://github.com/bsord/rcvr-api/compare/0.1.10...0.1.11) (2020-10-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **monitor:** fix healthz endpoint ([c346bb9](https://github.com/bsord/rcvr-api/commit/c346bb93db8d0d4e9b7ab3589dedf2bbab86043b))
-
-
-
-## [0.1.7](https://github.com/bsord/rcvr-api/compare/0.1.6...0.1.7) (2020-10-20)
-
-
-### Bug Fixes
-
-* **monitoring:** add healthz endpoint ([7669234](https://github.com/bsord/rcvr-api/commit/7669234707e9075f9f883f5f56dd8b87a413a006))
 
 
 
