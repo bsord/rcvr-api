@@ -1,3 +1,12 @@
+## [0.1.11](https://github.com/bsord/rcvr-api/compare/0.1.10...0.1.11) (2020-10-21)
+
+
+### Bug Fixes
+
+* **cors:** add env var config support ([2e8f1a1](https://github.com/bsord/rcvr-api/commit/2e8f1a16d3bfc3daf0da347d85b73aaec63a7b46))
+
+
+
 ## [0.1.10](https://github.com/bsord/rcvr-api/compare/0.1.9...0.1.10) (2020-10-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **monitoring:** add healthz endpoint ([7669234](https://github.com/bsord/rcvr-api/commit/7669234707e9075f9f883f5f56dd8b87a413a006))
-
-
-
-## [0.1.6](https://github.com/bsord/rcvr-api/compare/0.1.5...0.1.6) (2020-10-20)
-
-
-### Bug Fixes
-
-* **helm:** fix db username env var ([f736f09](https://github.com/bsord/rcvr-api/commit/f736f09be218d57f5340796c91628628cc95bc48))
 
 
 
