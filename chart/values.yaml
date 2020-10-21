@@ -22,7 +22,7 @@ redisHost: rcvr-session-cache-redis-master
 redisPort: "6379"
 redisPassword: S3ssionStore!
 
-relayHost: rcvr-relay
+relayHost: rcvr-relay-postfix
 relayPort: "587"
 senderDomain: bsord.dev
 websiteDomain: rcvr.bsord.dev
