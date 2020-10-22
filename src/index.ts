@@ -13,13 +13,13 @@ const main = async () => {
     await createConnection();
 
     const schema = await createSchema();
-
+    console.log("test");
     const apolloServer = new ApolloServer({
         schema,
         context: ({ req, res }: any) => ({ req, res }),
         introspection: true //enable playground outside, disable in prod!
     })
- 
+    
     const app = Express();
     app.use(cors({
         origin: "https://"+ process.env.CORS_ORIGIN,
@@ -48,6 +48,7 @@ const main = async () => {
 
     // Handle livenessProbe
     app.get('/healthz', (req, res) => {
+        console.log(req.hostname)
         res.send('im alive');
     });
 
