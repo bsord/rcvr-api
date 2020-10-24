@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/bsord/rcvr-api/compare/0.1.13...0.2.0) (2020-10-24)
+
+
+### Features
+
+* **workflow:** add documentation ([bd6138b](https://github.com/bsord/rcvr-api/commit/bd6138b02ebec0549382683ef9fa148133faca59))
+
+
+
 ## [0.1.13](https://github.com/bsord/rcvr-api/compare/0.1.12...0.1.13) (2020-10-22)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **monitoring:** correct healthz function ([eb97086](https://github.com/bsord/rcvr-api/commit/eb970863e7b4af5e6978a5d9fe70289bd108c3e1))
-
-
-
-## [0.1.9](https://github.com/bsord/rcvr-api/compare/0.1.8...0.1.9) (2020-10-20)
-
-
-### Bug Fixes
-
-* **monitoring:** change healthz response ([9a3a49b](https://github.com/bsord/rcvr-api/commit/9a3a49be065d566bebd22f4d778a47195a9ce589))
 
 
 
