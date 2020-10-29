@@ -7,5 +7,5 @@ Redis
 
 # Todo
  - [ ] Abstract user to it's own service
- - [x] Talk to mail relay through notification service instead of directly
+ - [ ] Talk to mail relay through notification service instead of directly
  - [x] Better error handling on startup
