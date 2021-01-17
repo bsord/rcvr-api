@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/bsord/rcvr-api/compare/0.2.0...0.3.0) (2021-01-17)
+
+
+### Features
+
+* **helm:** add HA support ([46aa12e](https://github.com/bsord/rcvr-api/commit/46aa12edb5c67a458f93f05cf7af373d5e223042))
+
+
+
 # [0.2.0](https://github.com/bsord/rcvr-api/compare/0.1.13...0.2.0) (2020-10-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **cors:** add env var config support ([2e8f1a1](https://github.com/bsord/rcvr-api/commit/2e8f1a16d3bfc3daf0da347d85b73aaec63a7b46))
-
-
-
-## [0.1.10](https://github.com/bsord/rcvr-api/compare/0.1.9...0.1.10) (2020-10-20)
-
-
-### Bug Fixes
-
-* **monitoring:** correct healthz function ([eb97086](https://github.com/bsord/rcvr-api/commit/eb970863e7b4af5e6978a5d9fe70289bd108c3e1))
 
 
 
