@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/bsord/rcvr-api/compare/0.3.0...0.4.0) (2021-01-23)
+
+
+### Features
+
+* **db:** update default db service name ([2931a83](https://github.com/bsord/rcvr-api/commit/2931a834a65987fdcdb0f482056a61aab89c71a3))
+
+
+
 # [0.3.0](https://github.com/bsord/rcvr-api/compare/0.2.0...0.3.0) (2021-01-17)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **helm:** change relay service ref ([3dce5e7](https://github.com/bsord/rcvr-api/commit/3dce5e74e3ed0d65878b739b7e4673a2e910bc2c))
-
-
-
-## [0.1.11](https://github.com/bsord/rcvr-api/compare/0.1.10...0.1.11) (2020-10-21)
-
-
-### Bug Fixes
-
-* **cors:** add env var config support ([2e8f1a1](https://github.com/bsord/rcvr-api/commit/2e8f1a16d3bfc3daf0da347d85b73aaec63a7b46))
 
 
 
