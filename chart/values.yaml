@@ -12,7 +12,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-dbHost: rcvr-db-mariadb
+dbHost: rcvr-db-mariadb-primary
 dbPort: "3306"
 dbName: rcvr
 dbUser: rcvr
