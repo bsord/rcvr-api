@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/bsord/rcvr-api/compare/0.4.0...0.5.0) (2021-01-31)
+
+
+### Features
+
+* **seed:** create simple user seed ([707185f](https://github.com/bsord/rcvr-api/commit/707185fda60a83e4ae8fca87312fe88d76ffe590))
+
+
+
 # [0.4.0](https://github.com/bsord/rcvr-api/compare/0.3.0...0.4.0) (2021-01-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **todo:** added more work ([0becd50](https://github.com/bsord/rcvr-api/commit/0becd506bf3f2b7f8b84bfdc5d5d8553ac588f82))
-
-
-
-## [0.1.12](https://github.com/bsord/rcvr-api/compare/0.1.11...0.1.12) (2020-10-21)
-
-
-### Bug Fixes
-
-* **helm:** change relay service ref ([3dce5e7](https://github.com/bsord/rcvr-api/commit/3dce5e74e3ed0d65878b739b7e4673a2e910bc2c))
 
 
 
