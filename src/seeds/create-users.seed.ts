@@ -4,6 +4,7 @@ import { User } from '../entity/User'
 
 export default class CreateUsers implements Seeder {
     public async run(factory: Factory): Promise<any> {
-      await factory(User)().createMany(1)
+      await factory(User)().createMany(3)
+      await factory(User)().make({ email: 'demo@domain.com', clientId: '1234567890' })
     }
   }
