@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/bsord/rcvr-api/compare/0.8.0...0.9.0) (2021-01-31)
+
+
+### Features
+
+* **seed:** add schema scripts ([828c06f](https://github.com/bsord/rcvr-api/commit/828c06f73fdf3fc5b0a216c135f89ff8a4ae8f4d))
+
+
+
 # [0.8.0](https://github.com/bsord/rcvr-api/compare/0.7.0...0.8.0) (2021-01-31)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * **seed:** create simple user seed ([707185f](https://github.com/bsord/rcvr-api/commit/707185fda60a83e4ae8fca87312fe88d76ffe590))
-
-
-
-# [0.4.0](https://github.com/bsord/rcvr-api/compare/0.3.0...0.4.0) (2021-01-23)
-
-
-### Features
-
-* **db:** update default db service name ([2931a83](https://github.com/bsord/rcvr-api/commit/2931a834a65987fdcdb0f482056a61aab89c71a3))
 
 
 
