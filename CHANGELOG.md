@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/bsord/rcvr-api/compare/0.7.0...0.8.0) (2021-01-31)
+
+
+### Features
+
+* **seed:** add missing deps ([6fbdf40](https://github.com/bsord/rcvr-api/commit/6fbdf40dbf163080c418186a87847a68ca651576))
+
+
+
 # [0.7.0](https://github.com/bsord/rcvr-api/compare/0.6.0...0.7.0) (2021-01-31)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * **db:** update default db service name ([2931a83](https://github.com/bsord/rcvr-api/commit/2931a834a65987fdcdb0f482056a61aab89c71a3))
-
-
-
-# [0.3.0](https://github.com/bsord/rcvr-api/compare/0.2.0...0.3.0) (2021-01-17)
-
-
-### Features
-
-* **helm:** add HA support ([46aa12e](https://github.com/bsord/rcvr-api/commit/46aa12edb5c67a458f93f05cf7af373d5e223042))
 
 
 

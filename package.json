@@ -1,6 +1,6 @@
 {
   "name": "rcvr-api",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "GraphQL gateway for Rcvr",
   "main": "index.js",
   "scripts": {
