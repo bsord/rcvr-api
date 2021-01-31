@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/bsord/rcvr-api/compare/0.6.0...0.7.0) (2021-01-31)
+
+
+### Features
+
+* **seed:** include scripts and config ([b4a31a6](https://github.com/bsord/rcvr-api/commit/b4a31a6a113c398372c96fe33d704b4d420c912d))
+
+
+
 # [0.6.0](https://github.com/bsord/rcvr-api/compare/0.5.0...0.6.0) (2021-01-31)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * **helm:** add HA support ([46aa12e](https://github.com/bsord/rcvr-api/commit/46aa12edb5c67a458f93f05cf7af373d5e223042))
-
-
-
-# [0.2.0](https://github.com/bsord/rcvr-api/compare/0.1.13...0.2.0) (2020-10-24)
-
-
-### Features
-
-* **workflow:** add documentation ([bd6138b](https://github.com/bsord/rcvr-api/commit/bd6138b02ebec0549382683ef9fa148133faca59))
 
 
 
