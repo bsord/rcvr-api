@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/bsord/rcvr-api/compare/0.5.0...0.6.0) (2021-01-31)
+
+
+### Features
+
+* **seed:** properly create single user plus many ([efbb512](https://github.com/bsord/rcvr-api/commit/efbb5128d8e7fc62f222509f425ec18c51c68909))
+
+
+
 # [0.5.0](https://github.com/bsord/rcvr-api/compare/0.4.0...0.5.0) (2021-01-31)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * **workflow:** add documentation ([bd6138b](https://github.com/bsord/rcvr-api/commit/bd6138b02ebec0549382683ef9fa148133faca59))
-
-
-
-## [0.1.13](https://github.com/bsord/rcvr-api/compare/0.1.12...0.1.13) (2020-10-22)
-
-
-### Bug Fixes
-
-* **todo:** added more work ([0becd50](https://github.com/bsord/rcvr-api/commit/0becd506bf3f2b7f8b84bfdc5d5d8553ac588f82))
 
 
 
