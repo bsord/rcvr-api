@@ -10,5 +10,7 @@ module.exports = {
     "logging": true,
     "entities": [
         "src/entity/*.*"
-    ]
+    ],
+    seeds: ['src/seeds/**/*{.ts,.js}'],
+    factories: ['src/factories/**/*{.ts,.js}'],
  }
