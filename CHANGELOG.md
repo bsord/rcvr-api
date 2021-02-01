@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/bsord/rcvr-api/compare/0.9.0...0.10.0) (2021-02-01)
+
+
+### Features
+
+* **seed:** add dmarc report seed ([162b046](https://github.com/bsord/rcvr-api/commit/162b046d96accb9264c5e7e6525e5622e43d4768))
+
+
+
 # [0.9.0](https://github.com/bsord/rcvr-api/compare/0.8.0...0.9.0) (2021-01-31)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * **seed:** properly create single user plus many ([efbb512](https://github.com/bsord/rcvr-api/commit/efbb5128d8e7fc62f222509f425ec18c51c68909))
-
-
-
-# [0.5.0](https://github.com/bsord/rcvr-api/compare/0.4.0...0.5.0) (2021-01-31)
-
-
-### Features
-
-* **seed:** create simple user seed ([707185f](https://github.com/bsord/rcvr-api/commit/707185fda60a83e4ae8fca87312fe88d76ffe590))
 
 
 
