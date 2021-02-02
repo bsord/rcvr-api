@@ -13,6 +13,9 @@ import { GetGraphDataResolver } from "../modules/dmarcReport/GetGraphData"
 import { GetTableDataResolver } from "../modules/dmarcReport/GetTableData"
 import { GetSummaryDataResolver } from "../modules/dmarcReport/GetSummaryData"
 
+import { CreateOrganizationResolver } from "../modules/organization/CreateOrganization"
+import { MyOrganizationResolver } from "../modules/organization/MyOrganization"
+
 export const createSchema = () => buildSchema({
     resolvers: [
         ChangePasswordResolver,
@@ -26,7 +29,9 @@ export const createSchema = () => buildSchema({
         GetMyReportsResolver,
         GetGraphDataResolver,
         GetTableDataResolver,
-        GetSummaryDataResolver
+        GetSummaryDataResolver,
+        CreateOrganizationResolver,
+        MyOrganizationResolver
     ],
     authChecker: ({ context: {req} }) => {
         // return true if located, else return false
