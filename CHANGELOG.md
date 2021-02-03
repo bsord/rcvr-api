@@ -1,3 +1,12 @@
+# [0.14.0](https://github.com/bsord/rcvr-api/compare/0.13.0...0.14.0) (2021-02-03)
+
+
+### Features
+
+* **deps:** upgrade dependencies ([c38ea74](https://github.com/bsord/rcvr-api/commit/c38ea7460928ad6ddc74f2b47828b71f0179a195))
+
+
+
 # [0.13.0](https://github.com/bsord/rcvr-api/compare/0.12.0...0.13.0) (2021-02-03)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * **seed:** add dmarc report seed ([162b046](https://github.com/bsord/rcvr-api/commit/162b046d96accb9264c5e7e6525e5622e43d4768))
-
-
-
-# [0.9.0](https://github.com/bsord/rcvr-api/compare/0.8.0...0.9.0) (2021-01-31)
-
-
-### Features
-
-* **seed:** add schema scripts ([828c06f](https://github.com/bsord/rcvr-api/commit/828c06f73fdf3fc5b0a216c135f89ff8a4ae8f4d))
 
 
 
