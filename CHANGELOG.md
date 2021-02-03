@@ -1,3 +1,12 @@
+# [0.13.0](https://github.com/bsord/rcvr-api/compare/0.12.0...0.13.0) (2021-02-03)
+
+
+### Features
+
+* **orgs:** add org relation to user model ([06a8f19](https://github.com/bsord/rcvr-api/commit/06a8f1922ca2a2665bf67d0180fe5be3483de59f))
+
+
+
 # [0.12.0](https://github.com/bsord/rcvr-api/compare/0.11.0...0.12.0) (2021-02-03)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * **seed:** add schema scripts ([828c06f](https://github.com/bsord/rcvr-api/commit/828c06f73fdf3fc5b0a216c135f89ff8a4ae8f4d))
-
-
-
-# [0.8.0](https://github.com/bsord/rcvr-api/compare/0.7.0...0.8.0) (2021-01-31)
-
-
-### Features
-
-* **seed:** add missing deps ([6fbdf40](https://github.com/bsord/rcvr-api/commit/6fbdf40dbf163080c418186a87847a68ca651576))
 
 
 
