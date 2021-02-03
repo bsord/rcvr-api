@@ -18,7 +18,7 @@ const main = async () => {
         schema,
         context: ({ req, res }: any) => ({ req, res }),
         introspection: true //enable playground outside, disable in prod!
-    })
+    }) as any
     
     const app = Express();
     app.use(cors({
