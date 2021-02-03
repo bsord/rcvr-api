@@ -37,6 +37,7 @@ export class User extends BaseEntity{
     @Column('bool', {default: false})
     confirmed: boolean;
 
+    @Field(() => Organization, {nullable:true})
     @ManyToMany(() => Organization, organization => organization.members, {cascade: true})
     @JoinTable()
     organizations: Organization[];
