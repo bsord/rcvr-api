@@ -1,5 +1,6 @@
-import {Entity, PrimaryGeneratedColumn, PrimaryColumn, Column, BaseEntity} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, PrimaryColumn, Column, BaseEntity, ManyToMany, JoinTable} from "typeorm";
 import { ObjectType, Field, ID, Root } from "type-graphql";
+import { Organization } from "./Organization"
 
 @ObjectType()
 @Entity()
@@ -27,7 +28,6 @@ export class User extends BaseEntity{
     }
 
     @Field()
-    @Column()
     @Column({unique: true})
     email: string;
 
@@ -36,5 +36,9 @@ export class User extends BaseEntity{
 
     @Column('bool', {default: false})
     confirmed: boolean;
+
+    @ManyToMany(() => Organization, organization => organization.members, {cascade: true})
+    @JoinTable()
+    organizations: Organization[];
 
 }

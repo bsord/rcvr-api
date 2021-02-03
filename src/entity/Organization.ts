@@ -1,6 +1,6 @@
-import {Entity, PrimaryGeneratedColumn, PrimaryColumn, Column, BaseEntity} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToMany} from "typeorm";
 import { ObjectType, Field, ID} from "type-graphql";
-
+import { User } from './User'
 @ObjectType()
 @Entity()
 export class Organization extends BaseEntity{
@@ -10,11 +10,11 @@ export class Organization extends BaseEntity{
     id: string;
 
     @Field()
-    @PrimaryColumn('varchar', { length: 12 })
-    clientId: string;
-
-    @Field()
     @Column()
     name: string;
+
+    @Field(() => User, {nullable:true})
+    @ManyToMany(() => User, user => user.organizations)
+    members: User[];
 
 }

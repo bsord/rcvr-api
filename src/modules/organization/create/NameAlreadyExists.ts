@@ -4,8 +4,8 @@ import { Organization } from "../../../entity/Organization";
 @ValidatorConstraint({ async: true })
 export class NameAlreadyExistsConstraint implements ValidatorConstraintInterface {
 
-    validate(email: string) {
-        return Organization.findOne({ where: { email } }).then(organization => {
+    validate(name: string) {
+        return Organization.findOne({ where: { name } }).then(organization => {
             if (organization) return false;
             return true;
         });
