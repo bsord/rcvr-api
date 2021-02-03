@@ -1,3 +1,13 @@
+# [0.11.0](https://github.com/bsord/rcvr-api/compare/0.10.0...0.11.0) (2021-02-02)
+
+
+### Features
+
+* **deps:** update dependencies ([c41a784](https://github.com/bsord/rcvr-api/commit/c41a7847d0cc8f97c5a9ae442ef2cd754be1de44))
+* **orgs:** add orgs model ([117a244](https://github.com/bsord/rcvr-api/commit/117a244cd9a74278454926f368ec9c55dd9199af))
+
+
+
 # [0.10.0](https://github.com/bsord/rcvr-api/compare/0.9.0...0.10.0) (2021-02-01)
 
 
@@ -31,15 +41,6 @@
 ### Features
 
 * **seed:** include scripts and config ([b4a31a6](https://github.com/bsord/rcvr-api/commit/b4a31a6a113c398372c96fe33d704b4d420c912d))
-
-
-
-# [0.6.0](https://github.com/bsord/rcvr-api/compare/0.5.0...0.6.0) (2021-01-31)
-
-
-### Features
-
-* **seed:** properly create single user plus many ([efbb512](https://github.com/bsord/rcvr-api/commit/efbb5128d8e7fc62f222509f425ec18c51c68909))
 
 
 
