@@ -1,6 +1,7 @@
-import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToMany} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToMany, OneToMany} from "typeorm";
 import { ObjectType, Field, ID} from "type-graphql";
 import { User } from './User'
+import { Domain } from './Domain'
 @ObjectType()
 @Entity()
 export class Organization extends BaseEntity{
@@ -17,4 +18,7 @@ export class Organization extends BaseEntity{
     @ManyToMany(() => User, user => user.organizations)
     members: User[];
 
+    @Field(() => Domain, {nullable:true})
+    @OneToMany(() => Domain, domain => domain.organization)
+    domains: Domain[];
 }

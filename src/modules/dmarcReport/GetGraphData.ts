@@ -1,14 +1,19 @@
-import { Resolver, Query, Ctx} from "type-graphql";
+import { Resolver, Query, Ctx, Arg} from "type-graphql";
 import { DmarcGraphData } from "../../entity/DmarcGraphData";
 import { DmarcReport } from "../../entity/DmarcReport";
 import { RequestContext } from "../../types/RequestContext";
-import {getRepository} from "typeorm";
+import { getRepository } from "typeorm";
+import { ReportInput } from "./get/ReportInput"
 
 
 @Resolver()
 export class GetGraphDataResolver {
   @Query(() => [DmarcGraphData], { nullable: true })
-  async getGraphData(@Ctx() ctx: RequestContext): Promise<DmarcGraphData[] | undefined> {
+  async getGraphData(
+    //Handle Arguments/inputs
+    @Arg("data") {domainId}: ReportInput,
+    @Ctx() ctx: RequestContext
+  ): Promise<DmarcGraphData[] | undefined> {
     
     if(!ctx.req.session!.userId){
         return undefined
@@ -21,7 +26,7 @@ export class GetGraphDataResolver {
     .addSelect("SUM(CASE WHEN dmarcReport.dmarcDkim='pass' OR dmarcReport.dmarcSpf='pass' THEN dmarcReport.sourceCount ELSE 0 END)", "passes")
     .addSelect("SUM(CASE WHEN dmarcReport.dmarcDkim='fail' AND dmarcReport.dmarcSpf='fail' THEN dmarcReport.sourceCount ELSE 0 END)", "fails")
     .addSelect("SUM(CASE WHEN dmarcReport.disposition='none' THEN 0 ELSE dmarcReport.sourceCount END)", "rejects")
-    .where("dmarcReport.clientId = :id", { id: ctx.req.session!.clientId })
+    .where("dmarcReport.clientId = :id", { id: domainId })
 
     .addGroupBy('date')
 

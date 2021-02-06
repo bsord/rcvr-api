@@ -18,4 +18,7 @@ export class RegisterInput extends PasswordInput{
     @EmailAlreadyExists({message: "Email already in use"})
     email: string;
 
+    @Field()
+    @Length(1,255)
+    organizationName: string;
 }

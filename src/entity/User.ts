@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, PrimaryColumn, Column, BaseEntity, ManyToMany, JoinTable} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToMany, JoinTable} from "typeorm";
 import { ObjectType, Field, ID, Root } from "type-graphql";
 import { Organization } from "./Organization"
 
@@ -9,10 +9,6 @@ export class User extends BaseEntity{
     @Field(() => ID)
     @PrimaryGeneratedColumn('uuid')
     id: string;
-
-    @Field()
-    @PrimaryColumn('varchar', { length: 12 })
-    clientId: string;
 
     @Field()
     @Column()
