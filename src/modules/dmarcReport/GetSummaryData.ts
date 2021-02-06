@@ -1,14 +1,19 @@
-import { Resolver, Query, Ctx} from "type-graphql";
+import { Resolver, Query, Ctx, Arg} from "type-graphql";
 import { DmarcSummaryData } from "../../entity/DmarcGraphData";
 import { DmarcReport } from "../../entity/DmarcReport";
 import { RequestContext } from "../../types/RequestContext";
+import { ReportInput } from "./get/ReportInput"
 import {getRepository} from "typeorm";
 
 
 @Resolver()
 export class GetSummaryDataResolver {
   @Query(() => DmarcSummaryData, { nullable: true })
-  async getSummaryData(@Ctx() ctx: RequestContext): Promise<DmarcSummaryData | undefined> {
+  async getSummaryData(
+    //Handle Arguments/inputs
+    @Arg("data") {domainId}: ReportInput,
+    @Ctx() ctx: RequestContext
+  ): Promise<DmarcSummaryData | undefined> {
     
     if(!ctx.req.session!.userId){
         return undefined
@@ -25,7 +30,7 @@ export class GetSummaryDataResolver {
       .addSelect("SUM(CASE WHEN dmarcReport.dmarcSpf='fail' THEN dmarcReport.sourceCount ELSE 0 END)", "spfFailed")
       .addSelect("SUM(CASE WHEN dmarcReport.disposition='none' THEN 0 ELSE dmarcReport.sourceCount END)", "rejected")
       .addSelect("SUM(CASE WHEN dmarcReport.disposition='none' THEN dmarcReport.sourceCount ELSE 0 END)", "delivered")
-      .where("dmarcReport.clientId = :id", { id: ctx.req.session!.clientId })
+      .where("dmarcReport.clientId = :id", { id: domainId })
       .getRawOne();
 
     return <DmarcSummaryData> summaryResults

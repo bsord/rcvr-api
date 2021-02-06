@@ -11,6 +11,6 @@ export class MeResolver {
         return undefined
     }
 
-    return User.findOne(ctx.req.session!.userId)
+    return User.findOne(ctx.req.session!.userId, { relations: ["organizations"]  })
   }
 }

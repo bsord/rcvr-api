@@ -27,7 +27,7 @@ export class LoginResolver {
     }
     
     ctx.req.session!.userId = user.id
-    ctx.req.session!.clientId = user.clientId
+    //ctx.req.session!.clientId = user.clientId
     console.log(ctx.req.session!)
     return user
   }

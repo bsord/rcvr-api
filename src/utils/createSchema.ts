@@ -14,7 +14,9 @@ import { GetTableDataResolver } from "../modules/dmarcReport/GetTableData"
 import { GetSummaryDataResolver } from "../modules/dmarcReport/GetSummaryData"
 
 import { CreateOrganizationResolver } from "../modules/organization/CreateOrganization"
-import { MyOrganizationResolver } from "../modules/organization/MyOrganization"
+import { MyOrganizationsResolver } from "../modules/organization/MyOrganizations"
+import { CreateDomainResolver } from "../modules/domain/CreateDomain"
+import { GetDomainsResolver } from "../modules/domain/GetDomains"
 
 export const createSchema = () => buildSchema({
     resolvers: [
@@ -31,7 +33,9 @@ export const createSchema = () => buildSchema({
         GetTableDataResolver,
         GetSummaryDataResolver,
         CreateOrganizationResolver,
-        MyOrganizationResolver
+        MyOrganizationsResolver,
+        CreateDomainResolver,
+        GetDomainsResolver
     ],
     authChecker: ({ context: {req} }) => {
         // return true if located, else return false
