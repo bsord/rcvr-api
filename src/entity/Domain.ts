@@ -1,6 +1,8 @@
-import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, PrimaryColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, PrimaryColumn, BeforeInsert} from "typeorm";
 import { ObjectType, Field, ID} from "type-graphql";
 import { Organization } from './Organization'
+const generate = require('nanoid/generate')
+
 @ObjectType()
 @Entity()
 export class Domain extends BaseEntity{
@@ -12,6 +14,11 @@ export class Domain extends BaseEntity{
     @Field()
     @PrimaryColumn('varchar', { length: 12 })
     domainId: string;
+
+    @BeforeInsert()
+    async generateDomainId(): Promise<void> {
+        this.domainId = await generate("1234567890abcdef", 12);
+    }
 
     @Field()
     @Column()

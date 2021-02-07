@@ -4,7 +4,7 @@ import { DomainInput } from "./create/DomainInput";
 import { logger } from "../middleware/logger";
 import { RequestContext } from "../../types/RequestContext";
 import { Organization } from "../../entity/Organization";
-const generate = require('nanoid/generate')
+
 
 @Resolver()
 export class CreateDomainResolver {
@@ -29,7 +29,6 @@ export class CreateDomainResolver {
     
     const domain = await Domain.create({
         name,
-        domainId: generate("1234567890abcdef", 12),
         organization: org
     }).save()
 
