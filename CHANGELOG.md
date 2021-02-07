@@ -1,3 +1,21 @@
+# [0.16.0](https://github.com/bsord/rcvr-api/compare/0.15.0...0.16.0) (2021-02-07)
+
+
+### Features
+
+* **seed:** generate better seed data ([5064a09](https://github.com/bsord/rcvr-api/commit/5064a092a34a36813a1f3f34dcce1cf91573ace4))
+
+
+
+# [0.15.0](https://github.com/bsord/rcvr-api/compare/0.14.0...0.15.0) (2021-02-06)
+
+
+### Features
+
+* **domains:** associate data to domains ([0f11c08](https://github.com/bsord/rcvr-api/commit/0f11c08c7535179fa0201ee762de357f244cec9e))
+
+
+
 # [0.14.0](https://github.com/bsord/rcvr-api/compare/0.13.0...0.14.0) (2021-02-03)
 
 
@@ -22,25 +40,6 @@
 ### Features
 
 * **orgs:** build relationship to user model ([f1448fd](https://github.com/bsord/rcvr-api/commit/f1448fd9f45b5d942974f01c9e987d3c79514d6e))
-
-
-
-# [0.11.0](https://github.com/bsord/rcvr-api/compare/0.10.0...0.11.0) (2021-02-02)
-
-
-### Features
-
-* **deps:** update dependencies ([c41a784](https://github.com/bsord/rcvr-api/commit/c41a7847d0cc8f97c5a9ae442ef2cd754be1de44))
-* **orgs:** add orgs model ([117a244](https://github.com/bsord/rcvr-api/commit/117a244cd9a74278454926f368ec9c55dd9199af))
-
-
-
-# [0.10.0](https://github.com/bsord/rcvr-api/compare/0.9.0...0.10.0) (2021-02-01)
-
-
-### Features
-
-* **seed:** add dmarc report seed ([162b046](https://github.com/bsord/rcvr-api/commit/162b046d96accb9264c5e7e6525e5622e43d4768))
 
 
 
