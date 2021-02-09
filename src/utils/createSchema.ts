@@ -17,6 +17,7 @@ import { CreateOrganizationResolver } from "../modules/organization/CreateOrgani
 import { MyOrganizationsResolver } from "../modules/organization/MyOrganizations"
 import { CreateDomainResolver } from "../modules/domain/CreateDomain"
 import { GetDomainsResolver } from "../modules/domain/GetDomains"
+import { DeleteDomainResolver } from "../modules/domain/DeleteDomain"
 
 export const createSchema = () => buildSchema({
     resolvers: [
@@ -35,7 +36,8 @@ export const createSchema = () => buildSchema({
         CreateOrganizationResolver,
         MyOrganizationsResolver,
         CreateDomainResolver,
-        GetDomainsResolver
+        GetDomainsResolver,
+        DeleteDomainResolver
     ],
     authChecker: ({ context: {req} }) => {
         // return true if located, else return false
