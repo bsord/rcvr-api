@@ -12,6 +12,7 @@ import { GetMyReportsResolver } from "../modules/dmarcReport/GetMyReports"
 import { GetGraphDataResolver } from "../modules/dmarcReport/GetGraphData"
 import { GetTableDataResolver } from "../modules/dmarcReport/GetTableData"
 import { GetSummaryDataResolver } from "../modules/dmarcReport/GetSummaryData"
+import { GetUsageDataResolver } from "../modules/dmarcReport/GetUsageData"
 
 import { CreateOrganizationResolver } from "../modules/organization/CreateOrganization"
 import { MyOrganizationsResolver } from "../modules/organization/MyOrganizations"
@@ -37,7 +38,8 @@ export const createSchema = () => buildSchema({
         MyOrganizationsResolver,
         CreateDomainResolver,
         GetDomainsResolver,
-        DeleteDomainResolver
+        DeleteDomainResolver,
+        GetUsageDataResolver
     ],
     authChecker: ({ context: {req} }) => {
         // return true if located, else return false
