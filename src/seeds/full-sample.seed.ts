@@ -22,6 +22,7 @@ export default class CreateUsers implements Seeder {
                         await factory(DmarcReport)().createMany(500,{ clientId: domain.domainId })
                     })
                     organization.domains = domains
+                    organization.stripeCustomerId = 'cus_Ix9aLK4NNQigbl'
                     return organization
                 })
                 .createMany(2)

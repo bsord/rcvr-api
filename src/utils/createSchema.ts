@@ -20,6 +20,9 @@ import { CreateDomainResolver } from "../modules/domain/CreateDomain"
 import { GetDomainsResolver } from "../modules/domain/GetDomains"
 import { DeleteDomainResolver } from "../modules/domain/DeleteDomain"
 
+import { CreateSubscriptionResolver } from "../modules/billing/CreateSubscription"
+import { GetSubscriptionResolver } from "../modules/billing/GetSubscription"
+
 export const createSchema = () => buildSchema({
     resolvers: [
         ChangePasswordResolver,
@@ -39,7 +42,9 @@ export const createSchema = () => buildSchema({
         CreateDomainResolver,
         GetDomainsResolver,
         DeleteDomainResolver,
-        GetUsageDataResolver
+        GetUsageDataResolver,
+        CreateSubscriptionResolver,
+        GetSubscriptionResolver,
     ],
     authChecker: ({ context: {req} }) => {
         // return true if located, else return false
