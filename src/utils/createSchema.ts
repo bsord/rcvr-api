@@ -22,6 +22,7 @@ import { DeleteDomainResolver } from "../modules/domain/DeleteDomain"
 
 import { CreateSubscriptionResolver } from "../modules/billing/CreateSubscription"
 import { GetSubscriptionResolver } from "../modules/billing/GetSubscription"
+import { GetDmarcStatusResolver } from "../modules/tools/DmarcLookup"
 
 export const createSchema = () => buildSchema({
     resolvers: [
@@ -45,6 +46,7 @@ export const createSchema = () => buildSchema({
         GetUsageDataResolver,
         CreateSubscriptionResolver,
         GetSubscriptionResolver,
+        GetDmarcStatusResolver
     ],
     authChecker: ({ context: {req} }) => {
         // return true if located, else return false
