@@ -19,9 +19,10 @@ export default class CreateUsers implements Seeder {
                     //create domains
                     const domains: Domain[] = await factory(Domain)().createMany(3)
                     domains.forEach( async domain => {
-                        await factory(DmarcReport)().createMany(15,{ clientId: domain.domainId })
+                        await factory(DmarcReport)().createMany(500,{ clientId: domain.domainId })
                     })
                     organization.domains = domains
+                    organization.stripeCustomerId = 'cus_Ix9aLK4NNQigbl'
                     return organization
                 })
                 .createMany(2)

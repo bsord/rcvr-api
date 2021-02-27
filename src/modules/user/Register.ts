@@ -8,6 +8,10 @@ import { sendEmail } from "../utils/sendEmail";
 import { createConfirmationUrl } from "../utils/createConfirmationUrl";
 
 
+const Stripe = require('stripe');
+const stripe = Stripe('sk_test_QcDnPrJQNxCs0200eCzknx2X00N1HpkVXq');
+
+
 @Resolver()
 export class RegisterResolver {
 
@@ -25,8 +29,13 @@ export class RegisterResolver {
     //Function for handling resolver
     const hashedPassword = await bcrypt.hash(password, 12);
 
+    const customer = await stripe.customers.create({
+      email: email,
+    });
+
     const org: Organization = await Organization.create({
-      name: organizationName
+      name: organizationName,
+      stripeCustomerId: customer.id
     }).save()
 
     const user = await User.create({
@@ -36,6 +45,7 @@ export class RegisterResolver {
         password: hashedPassword,
         organizations: [org]
     }).save()
+    
     
 
     await sendEmail(email, await createConfirmationUrl(user.id), 'newuser')

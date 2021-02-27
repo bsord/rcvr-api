@@ -76,3 +76,22 @@ export class DmarcTableData{
     blockedCount: number; //count of all reports that have disposition of 'reject'
 
 }
+
+@ObjectType()
+export class DmarcUsageData{
+    @Field()
+    total: number;
+
+    @Field(() => DmarcUsageBreakdownData, {nullable:true})
+    breakdown: DmarcUsageBreakdownData[]
+}
+
+@ObjectType()
+export class DmarcUsageBreakdownData{
+    @Field()
+    clientId: string;
+
+    @Field()
+    volume: number
+
+}

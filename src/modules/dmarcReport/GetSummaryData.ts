@@ -1,5 +1,5 @@
 import { Resolver, Query, Ctx, Arg} from "type-graphql";
-import { DmarcSummaryData } from "../../entity/DmarcGraphData";
+import { DmarcSummaryData } from "./get/DmarcDataTypes";
 import { DmarcReport } from "../../entity/DmarcReport";
 import { RequestContext } from "../../types/RequestContext";
 import { ReportInput } from "./get/ReportInput"
