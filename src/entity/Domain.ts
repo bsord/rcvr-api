@@ -1,11 +1,11 @@
-import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, PrimaryColumn, BeforeInsert} from "typeorm";
-import { ObjectType, Field, ID} from "type-graphql";
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, PrimaryColumn, BeforeInsert } from "typeorm";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Organization } from './Organization'
 const generate = require('nanoid/generate')
 
 @ObjectType()
 @Entity()
-export class Domain extends BaseEntity{
+export class Domain extends BaseEntity {
 
     @Field(() => ID)
     @PrimaryGeneratedColumn('uuid')
@@ -24,8 +24,16 @@ export class Domain extends BaseEntity{
     @Column()
     name: string;
 
-    @Field(() => Organization, {nullable:true})
+    @Field(() => Organization, { nullable: true })
     @ManyToOne(() => Organization, organization => organization.domains)
     organization: Organization;
+
+    @Field()
+    @Column({ default: 1 })
+    domainScore: number;
+
+    @Field()
+    @Column({ default: "" })
+    dmarcPolicy: string;
 
 }
