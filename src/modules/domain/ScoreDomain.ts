@@ -30,7 +30,7 @@ export class ScoreDomainResolver {
       try {
         const res = await getDmarcScore(domain.name)
         domain.domainScore = res.score
-        domain.dmarcPolicy = res.dmarcPolicy
+        domain.dmarcPolicy = res.policy
         await domain.save()
       } catch (e) {
         console.log(e)

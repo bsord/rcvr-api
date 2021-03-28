@@ -1,7 +1,7 @@
-import { ObjectType, Field} from "type-graphql";
+import { ObjectType, Field } from "type-graphql";
 
 @ObjectType()
-export class DmarcStatus{
+export class DmarcStatus {
 
     @Field()
     record: string
@@ -10,6 +10,9 @@ export class DmarcStatus{
     policy: string
 
     @Field()
-    domain: string
+    domainName: string
+
+    @Field()
+    score: number
 
 }

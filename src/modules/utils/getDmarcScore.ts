@@ -1,11 +1,7 @@
 import dns from 'dns'
+import { DmarcStatus } from "../tools/types/ToolTypes"
 const dnsPromises = dns.promises
 dnsPromises.setServers(['1.1.1.1']);
-
-type DmarcStatus = {
-  score: number;
-  dmarcPolicy: string;
-};
 
 
 export async function getDmarcScore(
@@ -47,7 +43,9 @@ export async function getDmarcScore(
     //return results
     let response: DmarcStatus = {
       score: score,
-      dmarcPolicy: dmarcPolicy
+      policy: dmarcPolicy,
+      record: dmarcRecord,
+      domainName: domainName
     }
     return response
   } catch (e) {
@@ -55,7 +53,9 @@ export async function getDmarcScore(
       //return results
       let response: DmarcStatus = {
         score: 1,
-        dmarcPolicy: "No DMARC Policy"
+        policy: "No DMARC Policy",
+        record: "No DMARC Record",
+        domainName: domainName
       }
       return response
     } else {
