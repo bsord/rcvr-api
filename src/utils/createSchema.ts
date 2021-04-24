@@ -23,6 +23,7 @@ import { DeleteDomainResolver } from "../modules/domain/DeleteDomain"
 import { CreateSubscriptionResolver } from "../modules/billing/CreateSubscription"
 import { GetSubscriptionResolver } from "../modules/billing/GetSubscription"
 import { GetDmarcStatusResolver } from "../modules/tools/DmarcLookup"
+import { ScoreDomainResolver } from "../modules/domain/ScoreDomain"
 
 export const createSchema = () => buildSchema({
     resolvers: [
@@ -46,9 +47,10 @@ export const createSchema = () => buildSchema({
         GetUsageDataResolver,
         CreateSubscriptionResolver,
         GetSubscriptionResolver,
-        GetDmarcStatusResolver
+        GetDmarcStatusResolver,
+        ScoreDomainResolver
     ],
-    authChecker: ({ context: {req} }) => {
+    authChecker: ({ context: { req } }) => {
         // return true if located, else return false
         return !!req.session.userId //bool
     }
