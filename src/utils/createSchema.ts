@@ -25,6 +25,13 @@ import { GetSubscriptionResolver } from "../modules/billing/GetSubscription"
 import { GetDmarcStatusResolver } from "../modules/tools/DmarcLookup"
 import { ScoreDomainResolver } from "../modules/domain/ScoreDomain"
 
+import { GetOverviewGraphDataResolver } from "../modules/overview/GetOverviewGraphData"
+import { GetOverviewTableDataResolver } from "../modules/overview/GetOverviewTableData"
+import { GetOverviewScoreDataResolver } from "../modules/overview/GetOverviewScoreData"
+import { GetOverviewProgressDataResolver } from "../modules/overview/GetOverviewProgressData"
+import { GetOverviewTodoDataResolver } from "../modules/overview/GetOverviewTodoData"
+import { GetOverviewSummaryDataResolver } from "../modules/overview/GetOverviewSummaryData"
+
 export const createSchema = () => buildSchema({
     resolvers: [
         ChangePasswordResolver,
@@ -48,7 +55,13 @@ export const createSchema = () => buildSchema({
         CreateSubscriptionResolver,
         GetSubscriptionResolver,
         GetDmarcStatusResolver,
-        ScoreDomainResolver
+        ScoreDomainResolver,
+        GetOverviewGraphDataResolver,
+        GetOverviewTableDataResolver,
+        GetOverviewScoreDataResolver,
+        GetOverviewProgressDataResolver,
+        GetOverviewTodoDataResolver,
+        GetOverviewSummaryDataResolver
     ],
     authChecker: ({ context: { req } }) => {
         // return true if located, else return false

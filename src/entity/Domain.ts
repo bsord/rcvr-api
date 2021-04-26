@@ -1,6 +1,7 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, PrimaryColumn, BeforeInsert } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, OneToMany, PrimaryColumn, BeforeInsert } from "typeorm";
 import { ObjectType, Field, ID } from "type-graphql";
 import { Organization } from './Organization'
+import { Todo } from './Todo'
 const generate = require('nanoid/generate')
 
 @ObjectType()
@@ -35,5 +36,9 @@ export class Domain extends BaseEntity {
     @Field()
     @Column({ default: "" })
     dmarcPolicy: string;
+
+    @Field(() => Todo, {nullable:true})
+    @OneToMany(() => Todo, todo => todo.domain)
+    todos: Todo[];
 
 }
