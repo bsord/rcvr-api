@@ -22,15 +22,19 @@ export class GetOverviewScoreDataResolver {
     const domains = await Domain.find({organization: {id: organizationId}})
 
     const totalDomains = domains.length
-    const summedScore = domains.reduce((a,b)=>{
+    const summedScore = domains.filter(({defensive}) => defensive != false).reduce((a,b)=>{
       return a+b['domainScore']
     },0)
+
+    const defensiveDomainsCount = domains.filter(({defensive}) => defensive != false).length
+    const activeDomainsCount = domains.filter(({defensive}) => defensive === false).length
+
     const finalScore = Math.round(summedScore / totalDomains)
 
     const scoreData:OverviewScoreData = {
       score: finalScore,
-      activeDomains: totalDomains, 
-      inactiveDomains: totalDomains,
+      activeDomains: activeDomainsCount, 
+      defensiveDomains: defensiveDomainsCount
 
     }
     return <OverviewScoreData> scoreData

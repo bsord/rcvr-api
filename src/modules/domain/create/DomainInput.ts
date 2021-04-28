@@ -14,4 +14,7 @@ export class DomainInput {
     @Length(1,255)
     organizationId: string;
 
+    @Field()
+    defensive: boolean;
+
 }

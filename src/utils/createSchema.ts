@@ -19,11 +19,15 @@ import { MyOrganizationsResolver } from "../modules/organization/MyOrganizations
 import { CreateDomainResolver } from "../modules/domain/CreateDomain"
 import { GetDomainsResolver } from "../modules/domain/GetDomains"
 import { DeleteDomainResolver } from "../modules/domain/DeleteDomain"
+import { GetDomainProgressResolver } from "../modules/domain/GetDomainProgress"
+import { GetDomainScoreResolver } from "../modules/domain/GetDomainScore"
+import { GetDomainTodoResolver } from "../modules/domain/GetDomainTodo"
 
 import { CreateSubscriptionResolver } from "../modules/billing/CreateSubscription"
 import { GetSubscriptionResolver } from "../modules/billing/GetSubscription"
 import { GetDmarcStatusResolver } from "../modules/tools/DmarcLookup"
 import { ScoreDomainResolver } from "../modules/domain/ScoreDomain"
+
 
 import { GetOverviewGraphDataResolver } from "../modules/overview/GetOverviewGraphData"
 import { GetOverviewTableDataResolver } from "../modules/overview/GetOverviewTableData"
@@ -61,7 +65,10 @@ export const createSchema = () => buildSchema({
         GetOverviewScoreDataResolver,
         GetOverviewProgressDataResolver,
         GetOverviewTodoDataResolver,
-        GetOverviewSummaryDataResolver
+        GetOverviewSummaryDataResolver,
+        GetDomainProgressResolver,
+        GetDomainScoreResolver,
+        GetDomainTodoResolver
     ],
     authChecker: ({ context: { req } }) => {
         // return true if located, else return false

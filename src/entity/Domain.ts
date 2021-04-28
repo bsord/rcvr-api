@@ -41,4 +41,8 @@ export class Domain extends BaseEntity {
     @OneToMany(() => Todo, todo => todo.domain)
     todos: Todo[];
 
+    @Field()
+    @Column({ default: false })
+    defensive: boolean;
+
 }

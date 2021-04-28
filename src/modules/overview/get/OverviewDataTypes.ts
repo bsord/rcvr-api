@@ -62,7 +62,7 @@ export class OverviewScoreData{
     activeDomains: number;
 
     @Field()
-    inactiveDomains: number;
+    defensiveDomains: number;
 
 }
 
