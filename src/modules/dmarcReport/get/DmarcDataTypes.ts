@@ -1,5 +1,5 @@
 
-import { ObjectType, Field, Root} from "type-graphql";
+import { ObjectType, Field} from "type-graphql";
 
 @ObjectType()
 export class DmarcGraphData{
@@ -59,18 +59,28 @@ export class DmarcTableData{
     hostname: string; //reverse dns lookup of source ip
 
     @Field()
-    compliant(@Root() parent: DmarcTableData ): boolean {
-        if(parent.dkimPassCount/parent.volume > .9 || parent.spfPassCount/parent.volume > .9) {return true} else {return false}
-    }
+    dmarcResult: string
 
     @Field()
     volume: number; //total count of messages summed from this source ip
 
     @Field()
-    dkimPassCount: number; //count of all reports that have dmarcDKIM passes
+    spfDomain: string; //count of all reports that have dmarcDKIM passes
 
     @Field()
-    spfPassCount: number; //count of all reports that have spfDKIM passes
+    spfResult: string; //count of all reports that have spfDKIM passes
+
+    @Field()
+    spfAlignment: string; //count of all reports that have spfDKIM passes
+
+    @Field()
+    dkimDomain: string; //count of all reports that have dmarcDKIM passes
+
+    @Field()
+    dkimResult: string; //count of all reports that have spfDKIM passes
+
+    @Field()
+    dkimAlignment: string; //count of all reports that have spfDKIM passes
 
     @Field()
     blockedCount: number; //count of all reports that have disposition of 'reject'

@@ -29,11 +29,14 @@ export class GetOverviewTableDataResolver {
     //get org that owns domain, make sure user is a member of the org.
 
     const dmarcReport = await getRepository(DmarcReport)
+      
       .createQueryBuilder("dmarcReport")
       .select('sourceIp')
       .addSelect("hostname", "hostname")
       .addSelect("provider", "provider")
       .addSelect("dmarcDomain", "domain")
+      .addSelect("providerASNOrg", "providerASNOrg")
+      .addSelect("countryCode", "countryCode")
       .addSelect("SUM(dmarcReport.sourceCount)", "volume")
       .addSelect("SUM(CASE WHEN dmarcReport.dmarcDkim='pass' THEN dmarcReport.sourceCount ELSE 0 END)", "dkimPassCount")
       .addSelect("SUM(CASE WHEN dmarcReport.dmarcSpf='pass' THEN dmarcReport.sourceCount ELSE 0 END)", "spfPassCount")
@@ -41,11 +44,11 @@ export class GetOverviewTableDataResolver {
 
       .where("dmarcReport.clientId IN (:...domainIds)", { domainIds: domainIds })
 
-      .addGroupBy('sourceIp')
+      .addGroupBy('provider')
       .orderBy('volume', 'DESC')
       .take(5)
       .getRawMany();
-
+//
       console.log(dmarcReport)
     
 

@@ -31,6 +31,12 @@ export class OverviewTableData{
     hostname: string; //reverse dns lookup of source ip
 
     @Field()
+    providerASNOrg: string; //reverse dns lookup of source ip
+
+    @Field()
+    countryCode: string; //reverse dns lookup of source ip
+
+    @Field()
     compliant(@Root() parent: OverviewTableData ): boolean {
         if(parent.dkimPassCount/parent.volume > .9 || parent.spfPassCount/parent.volume > .9) {return true} else {return false}
     }

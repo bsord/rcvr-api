@@ -42,6 +42,18 @@ export class DmarcReport extends BaseEntity{
     hostname: string;
 
     @Field()
+    @Column({default:"NA"})
+    providerASNOrg: string;
+
+    @Field()
+    @Column({default:"NA"})
+    countryCode: string;
+
+    @Field()
+    @Column({default:0})
+    providerASN: number;
+
+    @Field()
     @Column()
     sourceCount: number;
 
