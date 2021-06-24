@@ -4,7 +4,7 @@ import { DomainInput } from "./create/DomainInput";
 import { logger } from "../middleware/logger";
 import { RequestContext } from "../../types/RequestContext";
 import { Organization } from "../../entity/Organization";
-
+import { getDmarcScore } from "../utils/getDmarcScore";
 
 @Resolver()
 export class CreateDomainResolver {
@@ -14,7 +14,7 @@ export class CreateDomainResolver {
   @Mutation(() => Domain)
   async createDomain(
       //Handle Arguments/inputs
-      @Arg("data") {name, organizationId}: DomainInput,
+      @Arg("data") {name, organizationId, defensive}: DomainInput,
       @Ctx() ctx: RequestContext
   ): Promise<Domain | undefined> {
 
@@ -29,8 +29,18 @@ export class CreateDomainResolver {
     
     const domain = await Domain.create({
         name,
-        organization: org
+        organization: org,
+        defensive: defensive
     }).save()
+
+    try {
+      const res = await getDmarcScore(domain.name)
+      domain.domainScore = res.score
+      domain.dmarcPolicy = res.policy
+      await domain.save()
+    } catch (e) {
+      console.log(e)
+    }
 
 
     return domain
