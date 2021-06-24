@@ -1,3 +1,14 @@
+# [0.18.0](https://github.com/bsord/rcvr-api/compare/0.17.0...0.18.0) (2021-06-24)
+
+
+### Features
+
+* **provider:** implement better provider data ([7ba6a61](https://github.com/bsord/rcvr-api/commit/7ba6a612412220d164663d84758663611806efb4))
+* **scores:** add to domain model, create function to get dmarc score and update domain score ([07bd27e](https://github.com/bsord/rcvr-api/commit/07bd27e069012fb961f65fa9a8d91e11c59f601d))
+* **scoring:** update DmarcLookup module used by landing page ([2c4e175](https://github.com/bsord/rcvr-api/commit/2c4e175f33261414e55d1644acbb89624ab4d1a8))
+
+
+
 # [0.17.0](https://github.com/bsord/rcvr-api/compare/0.16.0...0.17.0) (2021-02-27)
 
 
@@ -37,15 +48,6 @@
 ### Features
 
 * **deps:** upgrade dependencies ([c38ea74](https://github.com/bsord/rcvr-api/commit/c38ea7460928ad6ddc74f2b47828b71f0179a195))
-
-
-
-# [0.13.0](https://github.com/bsord/rcvr-api/compare/0.12.0...0.13.0) (2021-02-03)
-
-
-### Features
-
-* **orgs:** add org relation to user model ([06a8f19](https://github.com/bsord/rcvr-api/commit/06a8f1922ca2a2665bf67d0180fe5be3483de59f))
 
 
 
