@@ -1,3 +1,12 @@
+## [0.18.1](https://github.com/bsord/rcvr-api/compare/0.18.0...0.18.1) (2021-06-24)
+
+
+### Bug Fixes
+
+* **startup:** change node version ([fe34eb5](https://github.com/bsord/rcvr-api/commit/fe34eb5eb91bd1e9258cb8b27766389607bf0136))
+
+
+
 # [0.18.0](https://github.com/bsord/rcvr-api/compare/0.17.0...0.18.0) (2021-06-24)
 
 
@@ -39,15 +48,6 @@
 ### Features
 
 * **domains:** associate data to domains ([0f11c08](https://github.com/bsord/rcvr-api/commit/0f11c08c7535179fa0201ee762de357f244cec9e))
-
-
-
-# [0.14.0](https://github.com/bsord/rcvr-api/compare/0.13.0...0.14.0) (2021-02-03)
-
-
-### Features
-
-* **deps:** upgrade dependencies ([c38ea74](https://github.com/bsord/rcvr-api/commit/c38ea7460928ad6ddc74f2b47828b71f0179a195))
 
 
 
