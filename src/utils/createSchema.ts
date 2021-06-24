@@ -19,10 +19,22 @@ import { MyOrganizationsResolver } from "../modules/organization/MyOrganizations
 import { CreateDomainResolver } from "../modules/domain/CreateDomain"
 import { GetDomainsResolver } from "../modules/domain/GetDomains"
 import { DeleteDomainResolver } from "../modules/domain/DeleteDomain"
+import { GetDomainProgressResolver } from "../modules/domain/GetDomainProgress"
+import { GetDomainScoreResolver } from "../modules/domain/GetDomainScore"
+import { GetDomainTodoResolver } from "../modules/domain/GetDomainTodo"
 
 import { CreateSubscriptionResolver } from "../modules/billing/CreateSubscription"
 import { GetSubscriptionResolver } from "../modules/billing/GetSubscription"
 import { GetDmarcStatusResolver } from "../modules/tools/DmarcLookup"
+import { ScoreDomainResolver } from "../modules/domain/ScoreDomain"
+
+
+import { GetOverviewGraphDataResolver } from "../modules/overview/GetOverviewGraphData"
+import { GetOverviewTableDataResolver } from "../modules/overview/GetOverviewTableData"
+import { GetOverviewScoreDataResolver } from "../modules/overview/GetOverviewScoreData"
+import { GetOverviewProgressDataResolver } from "../modules/overview/GetOverviewProgressData"
+import { GetOverviewTodoDataResolver } from "../modules/overview/GetOverviewTodoData"
+import { GetOverviewSummaryDataResolver } from "../modules/overview/GetOverviewSummaryData"
 
 export const createSchema = () => buildSchema({
     resolvers: [
@@ -46,9 +58,19 @@ export const createSchema = () => buildSchema({
         GetUsageDataResolver,
         CreateSubscriptionResolver,
         GetSubscriptionResolver,
-        GetDmarcStatusResolver
+        GetDmarcStatusResolver,
+        ScoreDomainResolver,
+        GetOverviewGraphDataResolver,
+        GetOverviewTableDataResolver,
+        GetOverviewScoreDataResolver,
+        GetOverviewProgressDataResolver,
+        GetOverviewTodoDataResolver,
+        GetOverviewSummaryDataResolver,
+        GetDomainProgressResolver,
+        GetDomainScoreResolver,
+        GetDomainTodoResolver
     ],
-    authChecker: ({ context: {req} }) => {
+    authChecker: ({ context: { req } }) => {
         // return true if located, else return false
         return !!req.session.userId //bool
     }
