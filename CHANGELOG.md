@@ -1,3 +1,12 @@
+## [0.18.2](https://github.com/bsord/rcvr-api/compare/0.18.1...0.18.2) (2021-06-25)
+
+
+### Bug Fixes
+
+* **email:** Update email notification template ([c95aaed](https://github.com/bsord/rcvr-api/commit/c95aaed09420c21d9041c1818dbc4c989ead9cb5))
+
+
+
 ## [0.18.1](https://github.com/bsord/rcvr-api/compare/0.18.0...0.18.1) (2021-06-24)
 
 
@@ -39,15 +48,6 @@
 ### Features
 
 * **seed:** generate better seed data ([5064a09](https://github.com/bsord/rcvr-api/commit/5064a092a34a36813a1f3f34dcce1cf91573ace4))
-
-
-
-# [0.15.0](https://github.com/bsord/rcvr-api/compare/0.14.0...0.15.0) (2021-02-06)
-
-
-### Features
-
-* **domains:** associate data to domains ([0f11c08](https://github.com/bsord/rcvr-api/commit/0f11c08c7535179fa0201ee762de357f244cec9e))
 
 
 
