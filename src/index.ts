@@ -49,7 +49,6 @@ const main = async () => {
 
     // Handle livenessProbe
     app.get('/healthz', (req, res) => {
-        console.log(req.hostname)
         res.send('im alive');
     });
     // Set your secret key. Remember to switch to your live secret key in production!
