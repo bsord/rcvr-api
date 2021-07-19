@@ -1,3 +1,12 @@
+## [0.18.3](https://github.com/bsord/rcvr-api/compare/0.18.2...0.18.3) (2021-07-19)
+
+
+### Bug Fixes
+
+* Logs no longer generated for every healthcheck ping ([3a544cd](https://github.com/bsord/rcvr-api/commit/3a544cd798d0cfbd2834f5df16f8a5ecf07c22bc))
+
+
+
 ## [0.18.2](https://github.com/bsord/rcvr-api/compare/0.18.1...0.18.2) (2021-06-25)
 
 
@@ -39,15 +48,6 @@
 * **seed:** generate better seed data ([2cc8495](https://github.com/bsord/rcvr-api/commit/2cc849571ddf551625ca06dbdad8b40886f2df4b))
 * **usage:** create usage report by org ([e09e63e](https://github.com/bsord/rcvr-api/commit/e09e63e72633f2d4b3e9b609cc21aa509763499a))
 * **verification:** auto sign in after email verify ([a1688f9](https://github.com/bsord/rcvr-api/commit/a1688f9b6dbbd602a8e0208e494b39a1e20f41dc))
-
-
-
-# [0.16.0](https://github.com/bsord/rcvr-api/compare/0.15.0...0.16.0) (2021-02-07)
-
-
-### Features
-
-* **seed:** generate better seed data ([5064a09](https://github.com/bsord/rcvr-api/commit/5064a092a34a36813a1f3f34dcce1cf91573ace4))
 
 
 
