@@ -52,7 +52,7 @@
     "ioredis": "^4.14.1",
     "jest": "^24.9.0",
     "mysql2": "^2.0.0",
-    "nanoid": "^2.1.7",
+    "nanoid": "^3.1.31",
     "nodemailer": "^6.3.1",
     "reflect-metadata": "^0.1.13",
     "stripe": "^8.135.0",
